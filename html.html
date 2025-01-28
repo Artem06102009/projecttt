@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажер по геометрии</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Тренажер по теоремам</h1>
+
+        <div class="topic-selector">
+            <button data-topic="pythagorean">Теорема Пифагора</button>
+            <button data-topic="cosine">Теорема Косинусов</button>
+        </div>
+
+        <div class="difficulty-selector">
+            <label>Сложность:</label>
+            <select id="difficulty">
+                <option value="easy">Легко</option>
+                <option value="medium">Средне</option>
+                <option value="hard">Сложно</option>
+            </select>
+        </div>
+
+        <div id="exercise-area">
+             <canvas id="triangleCanvas" width="200" height="150"></canvas>
+            <p id="exercise-text">Выберите тему и сложность для начала.</p>
+            <div id="input-area"></div>
+            <button id="check-button" style="display:none;">Проверить</button>
+            <p id="result"></p>
+        </div>
+
+        <div id="statistics">
+            <h2>Статистика</h2>
+            <p>Правильных ответов: <span id="correct-count">0</span></p>
+            <p>Всего попыток: <span id="total-count">0</span></p>
+        </div>
+    </div>
+
+    <script src="jss.js"></script>
+</body>
+</html>
